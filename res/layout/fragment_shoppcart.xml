@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mycart"
+            android:textColor="@drawable/reg_bt_on"
+            android:textSize="@dimen/mytaobaotextSize"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:entries="@array/produce" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/shoppcart_noproduct"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignTop="@+id/shoppcatr_listview"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/empty_img" />
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="你的购物车是空的,快点去放一些宝贝吧!"
+            android:textColor="#656565"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/go_shopping"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_select"
+            android:text="去商城"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/shoppcatr_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_weight="1.0"
+        android:divider="@drawable/reg_bt_on" >
+    </ListView>
+
+</RelativeLayout>

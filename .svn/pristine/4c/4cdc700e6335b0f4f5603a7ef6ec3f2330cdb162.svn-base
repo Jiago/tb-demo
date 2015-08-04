@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" 
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/stay_evaluate_backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_button_select"
+            android:drawableLeft="@drawable/mini_back"
+            android:text="@string/evaluate"
+            android:textColor="@drawable/select_on"
+            android:textSize="@dimen/mytaobaotextSize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/evaluate_image_imageview"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/girl" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/evaluate_name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/evaluate_price_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="381dp"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <RadioGroup
+                android:id="@+id/evaluate_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rate_good_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/accout_padding"
+                    android:layout_weight="1"
+                    android:background="@drawable/evaluate_selector"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rate_good"
+                    android:drawablePadding="@dimen/accout_padding"
+                    android:padding="@dimen/accout_padding"
+                    android:text="@string/rate_good" />
+
+                <RadioButton
+                    android:id="@+id/rate_mid_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/accout_padding"
+                    android:layout_weight="1"
+                    android:background="@drawable/evaluate_selector"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rate_mid"
+                    android:drawablePadding="@dimen/accout_padding"
+                    android:padding="@dimen/accout_padding"
+                    android:text="@string/rate_mid" />
+
+                <RadioButton
+                    android:id="@+id/rate_bad_radiobutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/evaluate_selector"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rate_bad"
+                    android:drawablePadding="@dimen/accout_padding"
+                    android:padding="@dimen/accout_padding"
+                    android:text="@string/rate_bad" />
+            </RadioGroup>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/accout_padding"
+                android:background="@drawable/layout_bt_on"
+                android:gravity="top"
+                android:hint="@string/evaluate_hint"
+                android:lines="10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" >                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_ratingbar" />
+                <RatingBar
+                    android:id="@+id/account_ratingbar2"
+                    style="@style/badRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="0" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" >                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expressage_ratingbar" />
+                <RatingBar
+                    android:id="@+id/expressage_ratingbar"
+                    style="@style/badRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:numStars="5"
+                    android:stepSize="1"
+                     />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" >                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Seller_service_ratingbar" />
+                <RatingBar
+                    android:id="@+id/Seller_service_ratingbar"
+                    style="@style/badRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:numStars="5"
+                    android:stepSize="1" />
+               
+            </LinearLayout>
+       
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_weight="1"
+        >
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView 
+                android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:text="@string/null_evaluate"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:button="@drawable/checkbox_selector" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/submit_evaluate_button"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_select"
+            android:text="@string/Submit_evaluate_button" />
+        
+    </LinearLayout>
+
+</LinearLayout>

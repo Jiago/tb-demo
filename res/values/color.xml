@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFF0</color>
+    <drawable name="select_on">#FF4400</drawable>  
+    <drawable name="select_nm">#969696</drawable>
+    <drawable name="button_on">#FF6347</drawable>
+    <drawable name="button_nm">#FF4400</drawable>
+    <drawable name="reg_bt_on">#969696</drawable> 
+    <drawable name="reg_bt_nm">#BDBDBD</drawable> 
+    <drawable name="layout_bt_on">#EBEBEB</drawable> 
+    <drawable name="layout_bt_nm">#FFFFFF</drawable>
+</resources>

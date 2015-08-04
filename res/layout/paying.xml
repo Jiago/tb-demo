@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <TextView
+        android:id="@+id/pay_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="付款中......."
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/pay_imageView"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:src="@drawable/money" />
+
+</LinearLayout>

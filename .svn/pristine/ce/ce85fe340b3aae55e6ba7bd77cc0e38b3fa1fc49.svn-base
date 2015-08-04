@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FFFFFF"
+ >
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mytaobao"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/logUsername_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/username_icon"
+        />
+    	
+    <EditText
+        android:id="@+id/logpassword_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/psd_icon"
+        android:inputType="textPassword"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:id="@+id/log_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_select"
+            android:text="@string/log"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/log_reg_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/reg_button_select"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1" />
+        
+    </LinearLayout>
+    <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/info"
+        	android:layout_marginTop="40dp"
+        	android:textColor="#BCBFCC"
+        	android:gravity="center_vertical"
+        	/>
+
+</LinearLayout>

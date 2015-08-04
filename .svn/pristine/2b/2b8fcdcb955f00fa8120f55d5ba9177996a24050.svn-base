@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+
+        <AutoCompleteTextView
+            android:id="@+id/search_autocompletetextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D4D4D4"
+            android:layout_weight="8"
+            android:hint="@string/home_search_hint"  
+            android:textSize="20dp" 
+            android:singleLine="true"        
+             />
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_select"
+            android:src="@drawable/search_button_search" />
+    </LinearLayout>
+    <RadioGroup
+            android:id="@+id/search_list_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_nomal"
+                style="@style/search_layout_btn"
+                android:checked="true"
+                android:text="@string/radio_nomal"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/radio_credit"
+                style="@style/search_layout_btn"
+                android:text="@string/radio_credit"                        
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_price"
+                style="@style/search_layout_btn"
+                android:text="@string/radio_price" 
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_sales"
+                style="@style/search_layout_btn"
+                android:text="@string/radio_sales"
+                android:layout_weight="1"/>
+
+    </RadioGroup>
+    
+    
+    <View     
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/reg_bt_on"    
+        android:layout_gravity="center_horizontal"    />
+    <com.pactera.taobaoprogect.activity.XListView
+        android:id="@+id/product_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.99"
+        android:choiceMode="singleChoice"
+        android:divider="#FFFFFF" />
+
+    
+
+</LinearLayout>

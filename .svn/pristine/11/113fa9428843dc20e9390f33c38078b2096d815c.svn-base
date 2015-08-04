@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myattr="http://schemas.android.com/apk/res/com.pactera.taobaoprogect"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+     >
+    <LinearLayout
+        android:id="@+id/ll01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_margin="10dp" >
+
+        <ImageButton
+            android:id="@+id/home_message_imagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF4400"
+            android:src="@drawable/home_message_icon" />
+
+        <EditText
+            android:id="@+id/home_search_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="8"
+            android:background="#D4D4D4"
+            android:drawableLeft="@drawable/search_icon"
+            android:focusableInTouchMode="false"
+            android:hint="@string/home_search_hint"
+            android:textSize="@dimen/textSize" />
+
+        <ImageButton
+            android:id="@+id/home_camera_imagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF4400"
+            android:src="@drawable/search_button_camera" />
+
+    </LinearLayout>
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll01"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.pactera.taobaoprogect.util.SlidingSwitcherView
+                android:id="@+id/slidingLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="150dip"
+                myattr:auto_play="true" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/home_image1" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/home_image2" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/home_image3" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/home_image4" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/home_image5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="15dip"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </com.pactera.taobaoprogect.util.SlidingSwitcherView>
+
+            <com.pactera.taobaoprogect.widget.MyGridView
+                android:id="@+id/hotgridview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:listSelector="#00000000"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="6dp" />
+
+            <ImageView
+                android:id="@+id/centerimagview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/t4" />
+
+            <com.pactera.taobaoprogect.widget.MyGridView
+                android:id="@+id/catgridview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:listSelector="#00000000"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="6dp" />
+        </LinearLayout>
+       
+    </ScrollView>
+    
+
+           
+    
+</RelativeLayout>
+
